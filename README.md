@@ -19,14 +19,14 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
 - Python 3.7 or higher
 - A Telegram Bot Token (get one from [@BotFather](https://t.me/BotFather))
 - A source Telegram Channel (must be a supergroup/channel)
-- A target Telegram Group (must be a supergroup)
+- A target Telegram Group
 - Bot must be an admin in both the channel and group with appropriate permissions
 
 ## Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/restore-group-bot.git
+   git clone https://github.com/phyvics/restore-group-bot.git
    cd restore-group-bot
    ```
 
@@ -51,7 +51,7 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
 5. **Set up bot permissions:**
    - Add the bot to your channel as an admin with permission to read messages
    - Add the bot to your group as an admin with permission to send messages
-   - Make sure the bot has permission to forward messages
+   - The bot only needs send message permissions in the group
 
 ## Running the Bot
 

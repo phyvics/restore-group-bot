@@ -43,11 +43,36 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
    ```
 
 4. **Configure the bot:**
-   - Copy `config.py` and update the following values:
-     - `TOKEN`: Your Telegram Bot Token from [@BotFather](https://t.me/BotFather)
-     - `CHANNEL_ID`: ID of your source channel (get it using [@myidbot](https://t.me/myidbot))
-     - `GROUP_ID`: ID of your target group (get it using [@myidbot](https://t.me/myidbot))
-     - `AUTHORIZED_USERS`: List of user IDs who can use the restore command
+   1. Create a new bot:
+      - Message [@BotFather](https://t.me/BotFather) on Telegram
+      - Send `/newbot` and follow the instructions
+      - Copy the bot token provided by BotFather
+   
+   2. Initial bot setup:
+      - Open `config.py`
+      - Replace `YOUR_BOT_TOKEN_HERE` with the token from BotFather
+      - Save the file
+   
+   3. Add the bot to your channel and group:
+      - Add the bot as an admin to your source channel with read messages permission
+      - Add the bot as an admin to your target group with send messages permission
+   
+   4. Get the channel and group IDs:
+      - Start the bot by running `python main.py`
+      - Send `/start` to the bot
+      - Send `/getids` to get the IDs of the channel and group
+      - Note down the IDs shown in the response
+      - Stop the bot (Ctrl+C)
+   
+   5. Final configuration:
+      - Open `config.py` again
+      - Replace the channel and group IDs with the ones you got from `/getids`
+      - Add your Telegram user ID to `AUTHORIZED_USERS` to be able to use admin commands
+      - Save the file
+   
+   6. Start the bot again:
+      - Run `python main.py`
+      - The bot is now fully configured and ready to use
 
 5. **Set up bot permissions:**
    - Add the bot to your channel as an admin with permission to read messages
@@ -91,7 +116,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## Support
 

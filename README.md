@@ -13,14 +13,15 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
 - 🔒 **Access Control**: Only authorized users can trigger the restoration process
 - ⚡ **Real-time Updates**: Messages are forwarded instantly as they are posted
 - 🛡️ **Error Handling**: Robust error handling and rate limiting to prevent API issues
+- 🔍 **Chat Information**: Get IDs and details of configured channels and groups
 
 ## Prerequisites
 
 - Python 3.7 or higher
 - A Telegram Bot Token (get one from [@BotFather](https://t.me/BotFather))
 - A source Telegram Channel (must be a supergroup/channel)
-- A target Telegram Group
-- Bot must be an admin in both the channel and group with appropriate permissions
+- A target Telegram Group (must be a supergroup)
+- Bot must be an admin in both the channel and group with send messages permissions
 
 ## Setup
 
@@ -64,6 +65,7 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
    - Send `/start` to see the welcome message
    - Send `/help` to see available commands
    - Send `/restore` to start the message restoration process
+   - Send `/getids` to view IDs and details of configured channels and groups
    - Send `/cancel` to cancel any ongoing operation
 
 ## Commands
@@ -71,6 +73,7 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
 - `/start` - Start the bot and see welcome message
 - `/help` - Show help message with available commands
 - `/restore` - Start the message restoration process
+- `/getids` - View IDs and details of configured channels and groups (admin only)
 - `/cancel` - Cancel any ongoing operation
 
 ## Important Notes
@@ -80,6 +83,7 @@ A powerful Telegram bot that can replicate and restore messages from a channel t
 - Telegram has rate limits, so the bot includes delays between message forwards
 - Keep your `config.py` file secure and never commit it to version control
 - The bot will automatically forward new messages as they are posted in the channel
+- Use `/getids` command to verify channel and group IDs without using external bots
 
 ## Contributing
 
